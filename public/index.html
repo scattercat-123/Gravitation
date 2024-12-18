@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gravity Simulation</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin: 20px;
+      background-color: black;
+      color: white;
+    }
+    
+    .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+
+    canvas {
+      border: 1px solid #ccc;
+      height: 65vh;
+      display: inline-block;
+      padding-left: 40vh;
+
+    }
+
+    .side-controls {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 20px; /* Space between items */
+    }
+
+    .controls {
+      margin-bottom: 20px;
+    }
+
+    label, input, button {
+      font-size: 3vh;
+    }
+
+    h1 {
+      font-size: 10vh;
+    }
+  </style>
+</head>
+<body>
+  <h1 style="font-size: 10vh;">Gravity Simulation</h1>
+  <div class="controls">
+    <label>
+      Weight: 
+      <input type="number" id="weight" value="1" step="0.1" min="0.1">
+    </label>
+    <label>
+      Gravity: 
+      <input type="number" id="gravity" value="9.8" step="0.1" min="0.1">
+    </label>
+    <label>
+      Distance: 
+      <input type="number" id="distance" value="100" step="1" min="1">
+    </label>
+    <button id="start">Start Simulation</button>
+  </div>
+  <div class="container">
+    <canvas id="canvas" width="500" height="400"></canvas>
+    <div class="side-controls">
+      <label id="color">
+        Colour:
+        <input type="color" value="#0000FF">
+      </label>
+      <a href="#docs">
+        <button>Check How This Works!</button>
+      </a>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
